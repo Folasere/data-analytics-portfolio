@@ -1,7 +1,6 @@
--- CREATING TABLES in the dataset
+-- CREATING TABLES in the database
 
 -- Creating Geolocation table 
-
 CREATE TABLE olist_geolocation_dataset(geolocation_zip_code_prefix INT, -- Step 1: Create table
 									    geolocation_lat	FLOAT,
 										geolocation_lng	FLOAT,
@@ -830,7 +829,6 @@ WHERE DATE_PART('year', order_purchase_timestamp) = 2016
 														  -- With this, it is safe to say Nov doesn't have a missing value, it just doesn't have any values.
 
 -- Handling the Missing Values																		 
-
 WITH calendar AS (
     SELECT generate_series(DATE '2016-09-01', DATE '2018-10-17', '1 month') AS month_start
 )
